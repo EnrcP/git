@@ -1,0 +1,7 @@
+<h3>Non ti sei ancora registrato?</h3>
+<button (click)="visualizzaForm=!visualizzaForm" class="btn btn-primary">{{visualizzaForm? "Chiudi registrazione" : "Apri registazione"}}</button>
+<app-form-persona *ngIf="visualizzaForm" (nuovaPersona) ="handleRegistrazione($event)"></app-form-persona>
+<div class="row">
+    <app-card-persona *ngFor="let persona of elencoPersone" [persona]="persona" (nomePersona) ="handleAccedi($event)"></app-card-persona>
+</div>
+
