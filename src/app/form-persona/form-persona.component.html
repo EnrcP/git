@@ -1,0 +1,13 @@
+<form [formGroup]="myForm">
+  <div>
+  <label for="txtNome">Nome</label>
+  <input type="text" class="form-text text-muted" formControlName="txtNome">
+  </div>
+
+  <div>
+  <label for="txtCognome">Cognome</label>
+  <input type="text" class="form-text text-muted" formControlName="txtCognome">
+  </div>
+
+  <button class="btn btn-primary" type="submit" (click)="inviaForm()">Invia</button>
+  </form>

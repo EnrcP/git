@@ -1,2 +1,5 @@
-<app-card-persona *ngFor="let persona of persone " [persona]="persona" (nomePersona) ="handleAccedi($event)"></app-card-persona>
+
+<button (click)="visualizzaForm=!visualizzaForm" class="btn btn-primary">{{visualizzaForm? "Chiudi registrazione" : "Apri registazione"}}</button>
+<app-form-persona *ngIf="visualizzaForm" (nuovaPersona) ="handleRegistrazione($event)"></app-form-persona>
+<app-card-persona *ngFor="let persona of elencoPersone " [persona]="persona" (nomePersona) ="handleAccedi($event)"></app-card-persona>
 
