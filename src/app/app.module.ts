@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormPersonaComponent } from './form-persona/form-persona.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ListaPersoneComponent } from './lista-persone/lista-persone.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     CardPersonaComponent,
     CustomPipePipe,
     FormPersonaComponent,
-    HomeComponent
+    HomeComponent,
+    ListaPersoneComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +30,8 @@ import { HomeComponent } from './home/home.component';
         component: HomeComponent
       },
       {
-        path:'listaPersone',
-        component: AppComponent
+        path:'lista-persone',
+        component: ListaPersoneComponent
       }
     ]),
   ],
