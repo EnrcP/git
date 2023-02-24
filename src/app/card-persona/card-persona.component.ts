@@ -9,7 +9,7 @@ import { IPersone } from '../ipersone';
 })
 export class CardPersonaComponent implements OnInit{
 
-  @Input() persona: IPersone = { nome : '', cognome:'', imgUrl:'' };
+  @Input() persona: IPersone = { id: 0, nome : '', cognome:'', imgUrl:'' };
   @Output() nomePersona = new EventEmitter();
 
   constructor() {}

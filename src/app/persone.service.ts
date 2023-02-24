@@ -1,22 +1,23 @@
-import { Injectable } from '@angular/core';
-import { IPersone } from '../app/ipersone'
+import { Injectable, OnInit } from '@angular/core';
+import { IPersone } from '../app/ipersone';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersoneService {
+export class PersoneService{
 
-  persone: IPersone[] = [
-    {nome:"Enrico", cognome:"Povia", imgUrl:"assets/images/user.png"},
-    {nome:"Francesco", cognome:"Divincenzo", imgUrl:"assets/images/user.png"}
-  ]
+  persone: IPersone[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getPersone = (): IPersone[] => this.persone
+  getPersone = (): IPersone[] => this.persone;
+
   pushPersone(persona: IPersone) {
     this.persone.push(persona);
-
   }
 
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CardPersonaComponent } from './card-persona/card-persona.component';
 import { CustomPipePipe } from './custom-pipe.pipe';
@@ -23,6 +24,7 @@ import { ListaPersoneComponent } from './lista-persone/lista-persone.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       {

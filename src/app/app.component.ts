@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { PersoneService } from './persone.service';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   title = 'myApp';
 
@@ -15,6 +16,12 @@ export class AppComponent {
     this.router.navigateByUrl(url);
   }
 
-  constructor(private router : Router){}
+  constructor(private router : Router, private personeService: PersoneService){}
+
+  ngOnInit(): void {
+    
+    
+    
+  } 
 
 }

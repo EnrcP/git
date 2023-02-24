@@ -11,7 +11,7 @@ import { PersoneService } from '../persone.service';
 export class FormPersonaComponent {
   myForm: FormGroup;
   @Output() nuovaPersona = new EventEmitter();
-  persona: IPersone = { nome: '', cognome:'', imgUrl:'' };
+  persona: IPersone = { id: 0, nome: '', cognome:'', imgUrl:'' };
 
   constructor(fb: FormBuilder, private personeService: PersoneService){
     this.myForm = fb.group({
@@ -29,7 +29,6 @@ export class FormPersonaComponent {
     //this.persona.nome=this.myForm.value.txtNome;
     //this.persona.cognome=this.myForm.value.txtCognome;
     //this.persona.imgUrl="assets/images/user.png";
-    this.nuovaPersona.emit(this.persona);
-
+    this.nuovaPersona.emit();
   }
 }
