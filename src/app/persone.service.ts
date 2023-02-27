@@ -14,7 +14,9 @@ export class PersoneService {
   constructor() { }
 
   getPersone = (): IPersone[] => this.persone
+  
   pushPersone(persona: IPersone) {
+
     this.persone.push(persona);
 
   }
