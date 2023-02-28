@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, AfterViewInit{
     this.router.navigateByUrl(url);
   }
 
-  ngAfterViewInit(){  }
+   ngAfterViewInit(){  }
 
   ngOnInit(): void {}
 

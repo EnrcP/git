@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./lista-dipendenti.component.scss']
 })
 export class ListaDipendentiComponent implements OnInit {
+
   data = new Date();
   visualizzaForm: boolean=false;
   @Input()
@@ -35,9 +36,11 @@ export class ListaDipendentiComponent implements OnInit {
   handleAccedi(persona: IPersone) {
     alert("Ciao "+ persona.nome+" "+persona.cognome+", hai effettuato l'accesso!"+this.data);
   }
+
   handleRegistrazione(){
     this.visualizzaForm=false;
   }
+  
   handleDipendente(url:string){
     this.router.navigateByUrl("dipendenti/" + url);
     console.log(url);

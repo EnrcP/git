@@ -1,0 +1,24 @@
+<h1 class="text-center">Benvenuto nella pagina di Login</h1>
+<h2 class="text-center">Effettua il login</h2>
+
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form">
+            <form form [formGroup]="myForm">
+                <div class="form-group">
+                    <label for="nameUtente">Username</label>
+                    <input type="text" class="form-control" placeholder="Nome Utente" formControlName="nameUtente">
+                </div>
+                <div class="form-group">
+                    <label for="pswUtente">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" formControlName="pswUtente">
+                </div>
+                <div class="form-group my-3">
+                    <button (click)="verifica()" class="btn btn-primary">Connetti</button>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>
+
