@@ -25,10 +25,6 @@ export class FormPersonaComponent {
     this.persona.cognome=this.myForm.value.txtCognome;
     this.persona.imgUrl="assets/images/user.png";
     this.personeService.pushPersone(this.persona);
-    //this.personeService.persone.push(this.persona);
-    //this.persona.nome=this.myForm.value.txtNome;
-    //this.persona.cognome=this.myForm.value.txtCognome;
-    //this.persona.imgUrl="assets/images/user.png";
     this.nuovaPersona.emit();
   }
 }

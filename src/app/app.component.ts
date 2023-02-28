@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PersoneService } from './core/services/persone.service';
-import { PaginaInizialeComponent } from './modules/home/pagina-iniziale/pagina-iniziale.component';
+import { PaginaInizialeComponent } from './modules/home/pages/pagina-iniziale/pagina-iniziale.component';
 
 
 

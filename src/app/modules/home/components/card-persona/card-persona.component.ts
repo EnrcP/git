@@ -12,18 +12,16 @@ export class CardPersonaComponent implements OnInit{
 
   @Input() persona: IPersone = { id: 0, nome : '', cognome:'', imgUrl:'' };
   @Output() nomePersona = new EventEmitter();
-  @Output() dipendenteSelezionato = new EventEmitter();
+  @Output() dipendenteSelezionato = new EventEmitter<string>();
 
   constructor(private router : Router) {}
 
   accedi(){
     this.nomePersona.emit(this.persona)
   }
-  passaDipendente(){
-    this.dipendenteSelezionato.emit(this.persona)
-  }
+
   mostraDipendente(url:string){
-      this.router.navigateByUrl(url);
+    this.dipendenteSelezionato.emit(url);
   }
 
   ngOnInit() {}

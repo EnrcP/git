@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class PaginaInizialeComponent {
 
   data= new Date();
-  message: string="Benvenuto nell'app di gestione dei dipendenti";
+  message: string = "Benvenuto nella pagina home dell'App";
 
   constructor() {}
 

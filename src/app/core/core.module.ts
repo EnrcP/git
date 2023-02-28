@@ -20,6 +20,10 @@ import { AuthenticationComponent } from './authentication/authentication.compone
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
   ]
 })
 export class CoreModule { }
