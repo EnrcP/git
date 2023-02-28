@@ -9,6 +9,7 @@ import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from './core/core.module';
 import { HeaderComponent } from './core/header/header.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
